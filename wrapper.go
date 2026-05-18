@@ -240,7 +240,7 @@ func DownloadWrapperRelease(mirror bool) {
 		}
 	} else if runtime.GOARCH == "arm64" {
 		var err error
-		resp, err = GetHttpClient().Get("https://api.github.com/repos/WorldObservationLog/wrapper/releases/tags/Wrapper.arm64.latest")
+		resp, err = GetHttpClient().Get("https://api.github.com/repos/WorldObservationLog/wrapper/releases/tags/wrapper.arm64.latest")
 		if err != nil {
 			panic(err)
 		}
