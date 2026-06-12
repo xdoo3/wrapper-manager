@@ -1,4 +1,4 @@
-package main
+	package main
 
 import (
 	"encoding/json"
@@ -88,7 +88,7 @@ func SelectInstance(adamId string) (string, error) {
 	}
 	if len(selectedInstances) == 0 {
 		for _, instance := range Instances {
-			available, err := checkAvailableOnRegion(adamId, instance.Region, false)
+			available, err := checkAvailableOnRegion(adamId, instance.Region, true)
 			if err != nil {
 				return "", err
 			}
